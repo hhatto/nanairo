@@ -66,6 +66,13 @@ func parseColor(color string) (int, int, int) {
         g, _ = strconv.ParseInt(tr, 16, 0)
         tr = fmt.Sprintf("%c%c", color[3], color[3])
         b, _ = strconv.ParseInt(tr, 16, 0)
+    } else if color[0] == '#' && len(color) == 7 {
+        tr := fmt.Sprintf("%c%c", color[1], color[2])
+        r, _ = strconv.ParseInt(tr, 16, 0)
+        tr = fmt.Sprintf("%c%c", color[3], color[4])
+        g, _ = strconv.ParseInt(tr, 16, 0)
+        tr = fmt.Sprintf("%c%c", color[5], color[6])
+        b, _ = strconv.ParseInt(tr, 16, 0)
     }
     return int(r), int(g), int(b)
 }
