@@ -1,6 +1,8 @@
 # nanairo
 nanairo is a Go library that make the colorized output of terminal applications.
 
+[![Build Status](https://travis-ci.org/hhatto/nanairo.png?branch=master)](https://travis-ci.org/hhatto/nanairo)
+
 ## Installation
 
 ```
