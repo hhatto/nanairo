@@ -16,7 +16,7 @@ import (
 )
 
 func main() {
-    fmt.Println(nanairo.FgColor("#ccc", "Hello World"))
+    fmt.Println(nanairo.FgColor("#c93", "Hello World"))
 }
 ```
 
