@@ -244,6 +244,21 @@ func esc(vs ...interface{}) (string) {
     return fmt.Sprintf("\x1b[%sm", r)
 }
 
+func Bold(text string) (boldText string) {
+    boldText = esc(1) + text + esc(22)
+    return boldText
+}
+
+func Italic(text string) (italicText string) {
+    italicText = esc(3) + text + esc(23)
+    return italicText
+}
+
+func Underline(text string) (underlineText string) {
+    underlineText = esc(4) + text + esc(24)
+    return underlineText
+}
+
 func FgColor(color string, text string) (coloredText string) {
     r, g, b := parseColor(color)
     c := rgb2xterm(r, g, b)
